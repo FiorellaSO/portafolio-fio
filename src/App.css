@@ -1,0 +1,157 @@
+/*font dancing script*/
+@font-face {
+  font-family: "dancing-script";
+  src: url("./fonts/DancingScript-Medium.ttf");
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 65px;
+  padding-right: 65px;
+  background: rgb(169,189,187);
+  background: linear-gradient(90deg, rgba(169,189,187,1) 0%, rgba(30,120,131,1) 39%, rgba(238,114,86,1) 100%);  color: white;
+}
+
+.header__logo {
+  text-align: center;
+  align-self: center;
+  font-size: 42px;
+  font-family: "dancing-script";
+  font-weight: 400;
+}
+
+.menu_list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.menu_list__item {
+  display: grid;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+}
+.menu_list__item__img {
+  height: 40px;
+  width: 40px;
+  justify-self: center;
+}
+.menu_list__item__txt {
+  text-align: center;
+}
+.menu_list__item:hover {
+  color: #f4f67b;
+}
+
+/*container*/
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/*Inicio*/
+.home_portada {
+  width: 1174px;
+  margin: 31px;
+  height: 378px;
+}
+
+.home_portada__frase {
+  text-align: center;
+  padding-top: 40px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.home_portada__firma {
+  text-align: right;
+  margin-top: 250px;
+  margin-right: 20px;
+}
+
+.home_title {
+  text-align: center;
+  font-weight: 400;
+  margin-top: 13px;
+  margin-bottom: 54px;
+}
+
+.mision-vision {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mision-vision__item {
+  background-color: #ee7256;
+  height: 295px;
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mision-vision__title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700px;
+}
+
+.mision-vision__text {
+  text-align: center;
+  font-family: sans-serif;
+  width: 250px;
+}
+
+/*footer*/
+.footer {
+  background-color: #1e7883;
+  padding-top: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  justify-content: center;
+}
+.footer-socials__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  color: white;
+}
+
+.footer-socials__logo {
+  height: 30px;
+  width: 30px;
+}
+
+.footer-socials__logo-gmail {
+  height: 17px;
+  margin-top: 6.5px;
+  margin-bottom: 6.5px;
+}
+.footer-copyright{
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: whitesmoke;
+}
+
