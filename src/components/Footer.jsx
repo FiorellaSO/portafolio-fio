@@ -1,33 +1,35 @@
+import { FACEBOOK, GMAIL, LINKEDIN } from "../images/images";
+
 export const Footer = () => {
   return (
-    <div className="footer">
-      <ul className="footer-socials">
-        <li className="footer-socials__item">
+    <div className="fs-footer">
+      <ul className="fs-footer-socials">
+        <li className="fs-footer-socials__item">
           <img
-            src="assets/facebook.png"
+            src={FACEBOOK}
             alt="fb logo"
-            className="footer-socials__logo"
+            className="fs-footer-socials__logo"
           />
           <p>Fiorella SO</p>
         </li>
-        <li className="footer-socials__item">
+        <li className="fs-footer-socials__item">
           <img
-            src="assets/gmail.png"
+            src={GMAIL}
             alt="fb logo"
-            className="footer-socials__logo footer-socials__logo-gmail"
+            className="fs-footer-socials__logo fs-footer-socials__logo-gmail"
           />
           <p>fiorellasantamaria2700</p>
         </li>
-        <li className="footer-socials__item">
+        <li className="fs-footer-socials__item">
           <img
-            src="assets/linkedin.png"
+            src={LINKEDIN}
             alt="fb logo"
-            className="footer-socials__logo"
+            className="fs-footer-socials__logo"
           />
           <p>Evelyn Santamaria</p>
         </li>
       </ul>
-      <p className="footer-copyright">
+      <p className="fs-footer-copyright">
         Copyright @{new Date().getFullYear()} - Fiorella Santamaria
       </p>
     </div>

@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className="main">
+      <div className="fs-main">
         <Container />
       </div>
       <Footer />

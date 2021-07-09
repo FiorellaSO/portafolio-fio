@@ -1,25 +1,144 @@
-/*font dancing script*/
+/*#####################
+####### VARIABLES ########
+#######################*/
+
+:root {
+  --color-primario: #1e7883;
+  --color-secundario: #a9bdbb;
+  --color-terciario: #ee7256;
+  --color-cuaternario: #f4f67b;
+  --color-claro: #fafafa;
+}
+
+/*#####################
+####### FUENTES ########
+#######################*/
+
 @font-face {
   font-family: "dancing-script";
   src: url("./fonts/DancingScript-Medium.ttf");
 }
 
-.main {
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("./fonts/RobotoSlab-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Regular.ttf");
+}
+/*#####################
+####### MAIN ########
+#######################*/
+.fs-main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/*header*/
-.header {
+.fs-title {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: italic;
+  size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+.fs-image {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  transition: ease-in-out 500ms;
+}
+
+.fs-image:hover {
+  transform: scale(1.05);
+}
+
+.fs-box {
+  display: grid;
+  width: 310px;
+  padding: 50px;
+  text-align: center;
+  background-color: var(--color-primario);
+}
+
+.fs-box__title {
+  font-family: "Roboto";
+}
+
+.fs-box__txt {
+  font-family: "Open Sans";
+}
+
+.fs-box__bg_pri {
+  background-color: var(--color-primario);
+}
+
+.fs-box__bg_sec {
+  background-color: var(--color-secundario);
+}
+
+.fs-box__bg_ter {
+  background-color: var(--color-terciario);
+}
+/*#####################
+####### SLIDER ########
+#######################*/
+
+.fs-slider {
+  width: 1174px;
+}
+
+/*#####################
+####### BLOG CARD ########
+#######################*/
+
+.fs-blogcard {
+  display: grid;
+  text-align: center;
+  width: 275px;
+  padding: 25px;
+  background-color: var(--color-cuaternario);
+}
+
+.fs-blogcard__img {
+  width: 242px;
+  height: 197px;
+  margin: 15px;
+}
+.fs-blogcard__title {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+.fs-blogcard__txt {
+  font-family: "Open Sans";
+  font-size: 16px;
+}
+
+.fs-blogcard__bgdark {
+  background-color: var(--color-secundario);
+}
+/*#####################
+####### HEADER ########
+#######################*/
+
+.fs-header {
   display: flex;
   justify-content: space-between;
   padding-left: 65px;
   padding-right: 65px;
-  background: rgb(169,189,187);
-  background: linear-gradient(90deg, rgba(169,189,187,1) 0%, rgba(30,120,131,1) 39%, rgba(238,114,86,1) 100%);  color: white;
+  background: linear-gradient(90deg, #a9bdbb, #1e7883 39%, #ee7256);
+  color: white;
 }
 
-.header__logo {
+.fs-header__logo {
   text-align: center;
   align-self: center;
   font-size: 42px;
@@ -27,35 +146,37 @@
   font-weight: 400;
 }
 
-.menu_list {
+.fs-menu_list {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.menu_list__item {
+.fs-menu_list__item {
   display: grid;
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: "Open Sans";
   font-weight: 600;
   font-style: italic;
   color: white;
 }
-.menu_list__item__img {
+.fs-menu_list__item__img {
   height: 40px;
   width: 40px;
   justify-self: center;
 }
-.menu_list__item__txt {
+.fs-menu_list__item__txt {
   text-align: center;
 }
-.menu_list__item:hover {
+.fs-menu_list__item:hover {
   color: #f4f67b;
 }
 
-/*container*/
+/*#####################
+####### CONTAINER ########
+#######################*/
 
-.container {
+.fs-container {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
@@ -64,39 +185,44 @@
   margin-bottom: 50px;
 }
 
-/*Inicio*/
-.home_portada {
+/*#####################
+####### INICIO ########
+#######################*/
+
+.fs-home_portada {
   width: 1174px;
-  margin: 31px;
   height: 378px;
+  background-repeat: no-repeat;
+  background-size: 1174px 400px;
+  color: white;
 }
 
-.home_portada__frase {
+.fs-home_portada__frase {
   text-align: center;
   padding-top: 40px;
   font-weight: 400;
-  font-family: sans-serif;
+  font-family: "Open Sans";
 }
 
-.home_portada__firma {
+.fs-home_portada__firma {
   text-align: right;
   margin-top: 250px;
   margin-right: 20px;
 }
 
-.home_title {
+.fs-home_title {
   text-align: center;
   font-weight: 400;
   margin-top: 13px;
   margin-bottom: 54px;
 }
 
-.mision-vision {
+.fs-mision-vision {
   display: flex;
   justify-content: space-around;
 }
 
-.mision-vision__item {
+.fs-mision-vision__item {
   background-color: #ee7256;
   height: 295px;
   width: 470px;
@@ -105,31 +231,304 @@
   align-items: center;
 }
 
-.mision-vision__title {
+.fs-mision-vision__title {
   text-align: center;
   font-size: 22px;
   font-weight: 700px;
 }
 
-.mision-vision__text {
+.fs-mision-vision__text {
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Open Sans";
   width: 250px;
 }
 
-/*footer*/
-.footer {
+/*#####################
+####### SOBRE MI ########
+#######################*/
+
+.fs-sobremi-portada {
+  width: 1174px;
+  margin-top: 31px;
+  margin-bottom: 31px;
+  height: 378px;
+  background-repeat: no-repeat;
+  background-size: 1174px 400px;
+  display: flex;
+  align-items: center;
+}
+.fs-sobremi-portada__txt {
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  float: right;
+  font-size: 40px;
+  margin-left: 20%;
+}
+
+.fs-sobremi__titulo {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: italic;
+  size: 24px;
+  text-align: center;
+  margin: 10px;
+}
+
+.fs-sobremi__datos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.fs-sobremi__datos_list {
+  display: grid;
+  list-style: none;
+  font-family: "Open Sans";
+  gap: 20px;
+  font-size: 16px;
+  width: 500px;
+  height: 300px;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  padding-left: 68px;
+  padding-right: 68px;
+  background-color: var(--color-cuaternario);
+}
+
+.fs-sobremi__datos_img {
+  border-radius: 50%;
+  width: 370px;
+  height: 349px;
+}
+
+.fs-sobremi__skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.fs-sobremi__skills_foto {
+  border-radius: 50%;
+  width: 370px;
+  height: 349px;
+}
+
+.fs-sobremi__skills_list {
+  font-family: "Open Sans";
+  font-size: 16px;
+  width: 500px;
+  height: 300px;
+  background-color: var(--color-cuaternario);
+  padding-top: 38px;
+  padding-bottom: 38px;
+  padding-left: 68px;
+  padding-right: 68px;
+}
+/*#####################
+####### PORTAFOLIO ########
+#######################*/
+
+.fs-portafolio__portada {
+  width: 1174px;
+  margin-top: 31px;
+  margin-bottom: 31px;
+  height: 378px;
+  background-repeat: no-repeat;
+  background-size: 1174px 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fs-portafolio__portada_txt {
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.fs-portafolio__links {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.fs-portafolio__link {
+  text-decoration: none;
+  font-family: "Roboto Slab";
+  background-color: var(--color-primario);
+  padding: 10px;
+  color: var(--color-claro);
+}
+
+.fs-portafolio__link:hover {
+  background-color: var(--color-cuaternario);
+  color: var(--color-primario);
+}
+
+.fs-bnw {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fs-disenos__imgs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fs-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fs-form_inputs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px;
+}
+
+.fs-form_input {
+  padding: 10px;
+  border: none;
+  background-color: var(--color-secundario);
+}
+
+.fs-form_input:focus {
+  outline: none;
+}
+
+.fs-form_input::placeholder {
+  color: black;
+}
+
+.fs-form_input__msg {
+  width: 405px;
+  height: 150px;
+  padding: 10px;
+  border: none;
+  background-color: var(--color-secundario);
+}
+
+.fs-form_input__msg::placeholder {
+  color: black;
+}
+
+.fs-form_btn {
+  margin: 20px;
+  padding: 10px;
+  width: 100px;
+  border: none;
+  color: black;
+  background-color: var(--color-primario);
+}
+/*#####################
+####### BLOG ########
+#######################*/
+
+.fs-blog__portada {
+  width: 1174px;
+  margin-top: 31px;
+  margin-bottom: 31px;
+  height: 378px;
+  background-repeat: no-repeat;
+  background-size: 1174px 400px;
+  display: flex;
+  align-items: center;
+}
+
+.fs-blog__portada_txt {
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  float: right;
+  font-size: 40px;
+  margin-left: 20%;
+}
+
+.fs-blog__consejosfoto {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fs-blog__consejosdiseno {
+  display: flex;
+  justify-content: space-around;
+}
+/*#####################
+####### CONTACTAME ########
+#######################*/
+.fs-contacto-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fs-contacto__portada {
+  width: 1174px;
+  margin-top: 31px;
+  margin-bottom: 31px;
+  height: 378px;
+  background-repeat: no-repeat;
+  background-size: 1174px 400px;
+  display: flex;
+  align-items: center;
+}
+
+.fs-contacto__portada_txt {
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  float: right;
+  font-size: 40px;
+  margin-left: 20%;
+}
+
+.fs-contacto__pregunta {
+  display: flex;
+  gap: 20px;
+}
+
+.fs-contacto__pregunta_btn {
+  width: 70px;
+  background-color: var(--color-primario);
+  color: black;
+  border: none;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.fs-contacto__datos {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  gap: 55px;
+}
+
+.fs-contacto__datos_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*#####################
+####### FOOTER ########
+#######################*/
+.fs-footer {
   background-color: #1e7883;
   padding-top: 20px;
 }
 
-.footer-socials {
+.fs-footer-socials {
   display: flex;
   list-style: none;
   margin: 0;
   justify-content: center;
 }
-.footer-socials__item {
+.fs-footer-socials__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,20 +537,19 @@
   color: white;
 }
 
-.footer-socials__logo {
+.fs-footer-socials__logo {
   height: 30px;
   width: 30px;
 }
 
-.footer-socials__logo-gmail {
+.fs-footer-socials__logo-gmail {
   height: 17px;
   margin-top: 6.5px;
   margin-bottom: 6.5px;
 }
-.footer-copyright{
+.fs-footer-copyright {
   margin: 0;
   padding: 10px;
   text-align: center;
   color: whitesmoke;
 }
-
