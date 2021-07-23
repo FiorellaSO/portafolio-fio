@@ -4,6 +4,9 @@ import { Title } from "../Title";
 import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import { Naturaleza } from "./Naturaleza";
 import { Lugares } from "./Lugares";
+import { Revistas } from "./Revistas";
+import { Flyers } from "./Flyers";
+import { Prototipos } from "./Prototipos";
 
 export const Portafolio = () => {
   const { path } = useRouteMatch();
@@ -39,29 +42,23 @@ export const Portafolio = () => {
 
       <Title msg="Diseños" />
 
-      <div className="fs-disenos__imgs">
-        <img src="/assets/nathansykes.png" alt="nathan sykes" />
-        <img src="/assets/globoaerostatico.png" alt="globo aerostatico" />
-        <img src="/assets/virtualpro.png" alt="virtual pro" />
-      </div>
-      {/* 
-      <div className="fs-disenos-links">
-        <Link to={`${path}/portadas`} className="fs-disenos__link">
-          Portadas
-        </Link>
-        <Link to={`${path}/revistas`} className="fs-disenos__link">
+      <div className="fs-portafolio__links">
+        <Link to={`${path}/revistas`} className="fs-portafolio__link">
           Revistas
         </Link>
-        <Link to={`${path}/afiches`} className="fs-disenos__link">
-          Afiches
+        <Link to={`${path}/flyers`} className="fs-portafolio__link">
+          Flyers
+        </Link>
+        <Link to={`${path}/prototipos`} className="fs-portafolio__link">
+          Prototipos
         </Link>
       </div>
 
       <Switch>
-        <Route component={BlackAndWhite} path={`/${path}/portadas`} />
-        <Route component={Naturaleza} path={`/${path}/revistas`} />
-        <Route component={Lugares} path={`/${path}/afiches`} />
-      </Switch> */}
+        <Route component={Revistas} path={`${path}/revistas`} />
+        <Route component={Flyers} path={`${path}/flyers`} />
+        <Route component={Prototipos} path={`${path}/prototipos`} />
+      </Switch>
     </div>
   );
 };

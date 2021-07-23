@@ -1,4 +1,5 @@
 @import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
+@import "react-toastify/dist/ReactToastify.css";
 
 body {
   margin: 0;

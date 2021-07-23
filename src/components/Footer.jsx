@@ -16,7 +16,7 @@ export const Footer = () => {
           <img
             src={GMAIL}
             alt="fb logo"
-            className="fs-footer-socials__logo fs-footer-socials__logo-gmail"
+            className="fs-footer-socials__logo"
           />
           <p>fiorellasantamaria2700</p>
         </li>
